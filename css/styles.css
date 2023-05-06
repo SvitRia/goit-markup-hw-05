@@ -14,6 +14,9 @@
 --leinercoolor: #E7E9FC;
 --background-green: #31D0AA; 
 --helper-text: #8E8F99;
+
+    /*--other*--*/
+--anim-fast: 250ms;
 }
 * {
     box-sizing: border-box;
@@ -194,6 +197,8 @@ div {
     padding-top: 24px;
     padding-bottom: 24px;
 
+    transition: color var(--anim-fast);
+
 }
 .header-nav-link:hover,
 .header-nav-link:focus, 
@@ -207,17 +212,17 @@ div {
    content: "";
    display: inline-block;
    position: absolute;
-   bottom: 0px;
+   bottom: -20px;
    left: 0px;
   
    width: 100%;
    height: 4px;
    border-radius: 2px;
    box-sizing: border-box;
-   color: var(--btn-color-okean);
+   
 }
-.header-nav-link.active {
-    color: var(--btn-color-okean);  
+.header-nav-link.active::after {
+    background-color: var(--btn-color-okean);
 }
 .link-list {
   
@@ -267,6 +272,7 @@ div {
         background:var(--btn-color-iris);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         border-radius: 4px;
+        transition: color var(--anim-fast),  background var(--anim-fast);
        
     }
    
@@ -274,7 +280,8 @@ div {
      
         color: var(--btn-color-iris);
         background:var(--backgraund-light);
-        
+        transition: color var(--anim-fast),  background var(--anim-fast);
+       
     
     }
     .button:hover, .button:focus, .button-light:hover, .button-light:focus {
@@ -387,8 +394,8 @@ text-align: left;
 }
     
 .about-tittle {
-       margin-top: 0px;
-       margin-bottom: 72px;
+    margin-top: 0px;
+    margin-bottom: 72px;
 }
 
 .about-card-set {
@@ -435,7 +442,7 @@ padding: 32px 0px;
 }
 
 .team-list {
-    display: flex;
+   display: flex;
    gap: 24px;
 }
 .team-item-tittle {
@@ -466,6 +473,7 @@ height: 40px;
     height: 100%;
   
     background: var(--btn-color-iris);
+    transition: backgraund-color var(--anim-fast);
 }
 .social-item-box:hover,
 .social-item-box:focus {
@@ -512,6 +520,7 @@ height: 40px;
     border: 1px solid var(--helper-text);
     border-radius: 4px;
     color: var(--helper-text);
+    transition: border var(--anim-fast) color var(--anim-fast);
 }
 .customers-item:hover,
 .customers-item:focus {
@@ -579,6 +588,7 @@ height: 40px;
     height: 100%;
   
     background: var(--btn-color-iris);
+    transition: backgraund-color var(--anim-fast);
 }
 .social-item-footerbox:hover,
 .social-item-footerbox:focus {
@@ -587,29 +597,33 @@ height: 40px;
 
 /*---modal---*/
 
-/*--.backdrop {
-
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    background: rgba(46, 47, 66, 0.4);
+.backdrop {
+position: fixed;
+top: 0px;
+left: 0px;
+width: 100%;
+height: 100%;
+background: rgba(46, 47, 66, 0.4);
+}
+.is-hidden {
+opacity: 0;
+pointer-events: none;
+visibility: hidden;
 }
 .modal {
-    position: absolute;
+position: absolute;
 width: 408px;
 height: 584px;
-left: calc(50% - 204px);
-top: calc(50% - 292px);
+left: 50%;
+top: 50%;
+transform: translateX(-50%) translateY(-50%);
 
 background: #FCFCFC;
 box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
 border-radius: 4px;
 
 }
-.modal-close-btn {
-    
+.modal-close-btn {    
 position: absolute;
 width: 24px;
 height: 24px;
@@ -618,7 +632,7 @@ top: 24px;
 border-radius: 50%;
 }
 .modal-close-icon {
-}*/
+}
     
 /*-----portfolio-----*/
 
@@ -643,6 +657,8 @@ border: 1px solid var(--leinercoolor);
 background: var(--backgraund-light);
 box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 border-radius: 4px;
+
+transition: border var(--anim-fast);
 
 }
 .btn-portfolio:hover,
