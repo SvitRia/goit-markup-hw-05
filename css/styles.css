@@ -219,7 +219,7 @@ div {
    height: 4px;
    border-radius: 2px;
    box-sizing: border-box;
-   /*background-color: var(--btn-color-okean);*/
+   background-color: var(--btn-color-okean);
 }
 .active {
     color: var(--btn-color-okean);
