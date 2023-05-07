@@ -193,7 +193,6 @@ div {
 
 .header-nav-link {
     position: relative;
- 
     color: var(--backgraund-dark);
     padding-top: 24px;
     padding-bottom: 24px;
@@ -522,7 +521,7 @@ height: 40px;
     border: 1px solid var(--helper-text);
     border-radius: 4px;
    
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customers-item:hover,
 .customers-item:focus {
@@ -694,7 +693,9 @@ row-gap: 48px;
 column-gap: 24px;
 }
 .link-portfolio {
+ 
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -714,8 +715,7 @@ transform: translateY(0%);
 .overlay {
     position: relative;
     overflow: hidden;
-    width: 100%;
- 
+    width: 360px;
     
     top: 0px;
     left: 0px;
