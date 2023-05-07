@@ -192,13 +192,14 @@ div {
 }
 
 .header-nav-link {
+    position: relative;
  
     color: var(--backgraund-dark);
     padding-top: 24px;
     padding-bottom: 24px;
 
-    transition: color var(--anim-fast);
-
+    transition: color var(--anim-fast), cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 .header-nav-link:hover,
 .header-nav-link:focus, 
@@ -212,7 +213,7 @@ div {
    content: "";
    display: inline-block;
    position: absolute;
-   bottom: -20px;
+   bottom: -1px;
    left: 0px;
   
    width: 100%;
@@ -220,6 +221,9 @@ div {
    border-radius: 2px;
    box-sizing: border-box;
    
+}
+.active {
+    color: var(--btn-color-okean);
 }
 .header-nav-link.active::after {
     background-color: var(--btn-color-okean);
@@ -231,7 +235,7 @@ div {
     margin-right: auto;
 }
 .link-item {
-    position: relative;
+   
     color: var(--backgraund-dark);
     text-decoration: none;  
     gap: 40px;
@@ -272,7 +276,7 @@ div {
         background:var(--btn-color-iris);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         border-radius: 4px;
-        transition: color var(--anim-fast),  background var(--anim-fast);
+        transition: backgraund-color var(--anim-fast), cubic-bezier(0.4, 0, 0.2, 1); 
        
     }
    
@@ -280,9 +284,7 @@ div {
      
         color: var(--btn-color-iris);
         background:var(--backgraund-light);
-        transition: color var(--anim-fast),  background var(--anim-fast);
        
-    
     }
     .button:hover, .button:focus, .button-light:hover, .button-light:focus {
         background-color:var(--btn-color-okean);
@@ -473,7 +475,8 @@ height: 40px;
     height: 100%;
   
     background: var(--btn-color-iris);
-    transition: backgraund-color var(--anim-fast);
+    
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 .social-item-box:hover,
 .social-item-box:focus {
@@ -519,8 +522,8 @@ height: 40px;
     height: 100%;
     border: 1px solid var(--helper-text);
     border-radius: 4px;
-    color: var(--helper-text);
-    transition: border var(--anim-fast) color var(--anim-fast);
+   
+    transition: border var(--anim-fast);
 }
 .customers-item:hover,
 .customers-item:focus {
